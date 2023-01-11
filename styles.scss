@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;700&family=Lexend:wght@400;700&family=Spectral:ital@1&display=swap");
+
+$font-stack: Barlow, sans-serif;
+$font-color: #5b5757;
+$pink: #ff738e;
+$link-hover: #00baa8;
+// $link-visited: #9e5964;
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: $font-stack;
+  background-color: #ffffff;
+  color: $font-color;
+  line-height: 1.6;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  -moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  border-bottom: dotted 1px;
+  color: $pink;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-hover;
+  }
+
+  &:visited {
+    // color: $link-visited;
+  }
+
+  &.img-link {
+    border-bottom: none;
+  }
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+#avatar {
+  border-radius: 100%;
+  width: 50%;
+}
+
+header {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -moz-align-items: -moz-flex-end;
+  -webkit-align-items: -webkit-flex-end;
+  -ms-align-items: -ms-flex-end;
+  align-items: flex-end;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  background-color: #000000;
+  background-attachment: scroll, fixed;
+  background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+  background-position: top left, top center;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, 80%;
+  color: rgba(255, 255, 255, 0.5);
+  height: 100%;
+  left: 0;
+  padding: 8em 4em;
+  position: fixed;
+  text-align: right;
+  top: 0;
+  width: 35%;
+
+  header > * {
+    -moz-flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-shrink: 0;
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  header > .inner {
+    -moz-flex-grow: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-grow: 1;
+    flex-grow: 1;
+    margin: 0 0 2em 0;
+  }
+
+  header strong,
+  #header b {
+    color: #ffffff;
+  }
+
+  header h2,
+  header h3,
+  header h4,
+  header h5,
+  header h6 {
+    color: #ffffff;
+  }
+
+  header h1 {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.35em;
+    line-height: 1.75em;
+    margin: 0;
+  }
+
+  header .image.avatar {
+    margin: 0 0 1em 0;
+    width: 6.25em;
+  }
+}
+
+main {
+  margin-left: 35%;
+  max-width: 54em;
+  padding: 8em 4em 4em 4em;
+  width: calc(100% - 35%);
+
+  section {
+    border-top: solid 2px #efefef;
+    margin: 4em 0 0 0;
+    padding: 4em 0 0 0;
+  }
+
+  section:first-child {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+ul.icons {
+  cursor: default;
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.icons li {
+  display: inline-block;
+  padding: 0 1em 0 0;
+}
+
+ul.icons li:last-child {
+  padding-right: 0;
+}
+
+ul.icons li .icon:before {
+  font-size: 1.5em;
+}
+
+.pink {
+  color: $pink;
+}
