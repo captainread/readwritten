@@ -76,7 +76,7 @@ select {
   }
 }
 body {
-  font-family: Barlow, sans-serif;
+  font-family: "Barlow", sans-serif;
   background-color: #ffffff;
   color: #5b5757;
   line-height: 1.6;
@@ -100,80 +100,52 @@ a.img-link {
   border-bottom: none;
 }
 
-p {
-  margin: 0 0 1em 0;
-}
-
-#avatar {
-  border-radius: 100%;
-  width: 50%;
-}
-
 header {
-  display: -moz-flex;
-  display: -ms-flex;
+  width: 33%;
   display: flex;
-  -moz-flex-direction: column;
   flex-direction: column;
-  -moz-align-items: -moz-flex-end;
-  -ms-align-items: -ms-flex-end;
   align-items: flex-end;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
   justify-content: space-between;
-  background-color: #000000;
   background-attachment: scroll, fixed;
-  background-image: url("images/overlay.png"), url("../../images/bg.jpg");
-  background-position: top left, top center;
+  background-image: url("../../images/overlay.png"), url("../../images/bg.jpg");
+  background-position: top left, center;
   background-repeat: repeat, no-repeat;
-  background-size: auto, 80%;
+  background-size: auto, cover;
   color: rgba(255, 255, 255, 0.5);
   height: 100%;
-  left: 0;
   padding: 8em 4em;
   position: fixed;
   text-align: right;
   top: 0;
-  width: 35%;
+  left: 0;
 }
-header header > * {
-  -ms-flex-shrink: 0;
-  flex-shrink: 0;
-  width: 100%;
-}
-header header > .inner {
-  -moz-flex-grow: 1;
-  -ms-flex-grow: 1;
-  flex-grow: 1;
-  margin: 0 0 2em 0;
-}
-header header strong,
-header #header b {
-  color: #ffffff;
-}
-header header h2,
-header header h3,
-header header h4,
-header header h5,
-header header h6 {
-  color: #ffffff;
-}
-header header h1 {
-  color: rgba(255, 255, 255, 0.5);
+header h1 {
+  color: rgba(255, 255, 255, 0.637);
   font-size: 1.35em;
   line-height: 1.75em;
+  font-weight: 400;
   margin: 0;
 }
-header header .image.avatar {
-  margin: 0 0 1em 0;
-  width: 6.25em;
+header #avatar {
+  border-radius: 100%;
+  margin: auto;
+  width: 10em;
+}
+header ul {
+  cursor: default;
+  list-style: none;
+  padding-left: 0;
+}
+header ul li {
+  display: inline-block;
+  padding: 0 1em 0 0;
 }
 
 main {
   margin-left: 35%;
   max-width: 54em;
   padding: 8em 4em 4em 4em;
-  width: 65%;
+  width: 67%;
 }
 main section {
   border-top: solid 2px #efefef;
@@ -186,25 +158,111 @@ main section:first-child {
   padding-top: 0;
 }
 
-ul.icons {
-  cursor: default;
-  list-style: none;
-  padding-left: 0;
+.row {
+  display: flex;
+  min-height: 100px;
 }
 
-ul.icons li {
-  display: inline-block;
-  padding: 0 1em 0 0;
-}
-
-ul.icons li:last-child {
-  padding-right: 0;
-}
-
-ul.icons li .icon:before {
-  font-size: 1.5em;
+.column {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
 }
 
 .pink {
   color: #ff738e;
+}
+
+/* XLarge */
+@media screen and (max-width: 1800px) {
+  body {
+    font-size: 12pt;
+  }
+}
+/* Large */
+@media screen and (max-width: 1280px) {
+  header {
+    padding: 6em 3em 3em 3em;
+    width: 30%;
+    margin-bottom: 0;
+  }
+  header h1 {
+    font-size: 1.25em;
+  }
+  header main {
+    margin-left: 30%;
+    max-width: none;
+    padding: 6em 3em 3em 3em;
+    width: 70%;
+  }
+}
+/* Medium */
+@media screen and (max-width: 980px) {
+  ul li {
+    font-size: 1.25em;
+  }
+  header {
+    background-attachment: scroll;
+    background-position: right;
+    background-size: auto, cover;
+    left: auto;
+    padding: 6em 4em;
+    position: relative;
+    text-align: center;
+    top: auto;
+    width: 100%;
+    display: block;
+  }
+  header h1 {
+    padding-top: 1rem;
+    font-size: 1.75em;
+  }
+  header #links {
+    text-align: center;
+  }
+  main {
+    margin: 0;
+    padding: 6em 4em;
+    width: 100%;
+  }
+  main #intro {
+    text-align: center;
+  }
+  main h2 {
+    text-align: center;
+  }
+}
+/* Small */
+@media screen and (max-width: 736px) {
+  h1 {
+    font-size: 1.25em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  ul li {
+    padding-left: 2em;
+  }
+  header {
+    padding: 2.25em 1.5em;
+  }
+  main {
+    padding: 2.25em 1.5em 0.25em 1.5em;
+  }
+  main section {
+    margin: 2.25em 0 0 0;
+    padding: 2.25em 0 0 0;
+  }
+  .row {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 480px) {
+  header {
+    font-size: small;
+  }
 }/*# sourceMappingURL=styles.css.map */
