@@ -2,6 +2,7 @@
 
 // Sass variables
 $font-stack: "Barlow", sans-serif;
+$italic: "Spectral", serif;
 $font-color: #5b5757;
 $pink: #ff738e;
 $link-hover: #00baa8;
@@ -177,23 +178,43 @@ main {
     margin-top: 0;
     padding-top: 0;
   }
+
+  .row {
+    display: flex;
+    min-height: 100px;
+    // background-color: #00baa8;
+  }
+
+  .column {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0 0;
+    // background-color: #ff738e;
+  }
 }
 
-.row {
-  display: flex;
-  min-height: 100px;
+.spectral {
+  font-family: "Spectral";
+  // color: $pink;
 }
 
-.column {
-  flex-basis: 50%;
-  display: flex;
-  flex-direction: column;
-  padding: 1em;
-}
-
-.pink {
+.name {
+  font-family: "Spectral";
   color: $pink;
 }
+
+.code-links {
+  margin-top: 0.25em;
+  a {
+    text-align: center;
+    border: none;
+    display: inline;
+    margin: 0 1em 0 0;
+  }
+}
+
+//----------------------- MEDIA QUERIES ---------------
 
 /* XLarge */
 @media screen and (max-width: 1800px) {

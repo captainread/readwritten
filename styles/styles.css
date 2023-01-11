@@ -157,21 +157,34 @@ main section:first-child {
   margin-top: 0;
   padding-top: 0;
 }
-
-.row {
+main .row {
   display: flex;
   min-height: 100px;
 }
-
-.column {
+main .column {
   flex-basis: 50%;
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  padding: 1em 0 0;
 }
 
-.pink {
+.spectral {
+  font-family: "Spectral";
+}
+
+.name {
+  font-family: "Spectral";
   color: #ff738e;
+}
+
+.code-links {
+  margin-top: 0.25em;
+}
+.code-links a {
+  text-align: center;
+  border: none;
+  display: inline;
+  margin: 0 1em 0 0;
 }
 
 /* XLarge */
