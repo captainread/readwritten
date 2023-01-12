@@ -107,7 +107,7 @@ header {
   align-items: flex-end;
   justify-content: space-between;
   background-attachment: scroll, fixed;
-  background-image: url("../../images/overlay.png"), url("../../images/bg.jpg");
+  background-image: url("../images/overlay.png"), url("../images/bg.jpg");
   background-position: top left, center;
   background-repeat: repeat, no-repeat;
   background-size: auto, cover;
@@ -187,6 +187,14 @@ main .column {
   margin: 0 1em 0 0;
 }
 
+#app {
+  font-size: 70px;
+  line-height: 78px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
 /* XLarge */
 @media screen and (max-width: 1800px) {
   body {
@@ -259,6 +267,9 @@ main .column {
   }
   ul li {
     padding-left: 2em;
+  }
+  #intro {
+    min-height: 4rem;
   }
   header {
     padding: 2.25em 1.5em;

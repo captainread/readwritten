@@ -123,7 +123,7 @@ header {
   align-items: flex-end;
   justify-content: space-between;
   background-attachment: scroll, fixed;
-  background-image: url("images/overlay.png"), url("images/bg.jpg");
+  background-image: url("../images/overlay.png"), url("../images/bg.jpg");
   background-position: top left, center;
   background-repeat: repeat, no-repeat;
   background-size: auto, cover;
@@ -310,6 +310,10 @@ main {
 
   ul li {
     padding-left: 2em;
+  }
+
+  #intro {
+    min-height: 4rem;
   }
 
   header {
