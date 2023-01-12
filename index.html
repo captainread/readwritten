@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/styles/styles.css" />
     <link rel="icon" type="images/svg+xml" href="images/favicon.svg" />
     <script src="https://kit.fontawesome.com/9d216659e4.js" crossorigin="anonymous"></script>
+
     <title>ReadWritten</title>
   </head>
   <body>
@@ -19,13 +20,13 @@
       <section id="links">
         <ul class="icons">
           <li>
-            <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://github.com/captainread"><i class="fa-brands fa-github"></i> GitHub</a>
           </li>
           <li>
-            <a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a href="https://www.linkedin.com/in/alice-read-238439b0/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
           </li>
           <li>
-            <a href="#"><i class="fa-solid fa-envelope"></i> Email</a>
+            <a href="mailto:aliceread94@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
           </li>
         </ul>
         <ul class="copyright">
@@ -40,7 +41,7 @@
     </header>
     <main>
       <section id="intro">
-        <h2>Hi! I'm <span class="name">Alice</span>, a Manchester-based web developer.</h2>
+        <h2>Hi! I'm <span class="name">Alice</span>, a Manchester-based <span class="auto-type"></span></h2>
       </section>
       <section id="projects">
         <h2>Recent Projects</h2>
@@ -52,7 +53,7 @@
             <p>Mobile app featuring Augmented Reality.</p>
             <p class="spectral">Front-end: Flutter, Dart, ar_flutter_plugin.</p>
             <div class="code-links">
-              <a href="#"><i class="fa-solid fa-code"></i> GitHub</a>
+              <a href="https://github.com/captainread/stAR"><i class="fa-solid fa-code"></i> GitHub</a>
               <a href="#"><i class="fa-solid fa-eye"></i> Live</a>
             </div>
           </article>
@@ -127,5 +128,16 @@
         </div>
       </section>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var typed = new Typed(".auto-type", {
+        strings: ["web developer.", "Northcoders graduate.", "internet enthusiast."],
+        typeSpeed: 70,
+        backSpeed: 50,
+        backDelay: 3000,
+        loop: true,
+      });
+    </script>
   </body>
 </html>
