@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;700&family=Lexend:wght@400;700&family=Spectral:ital@1&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: "Barlow", sans-serif;
+  background-color: #ffffff;
+  color: #5b5757;
+  line-height: 1.6;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  border-bottom: dotted 1px;
+  color: #ff738e;
+  text-decoration: none;
+}
+a:hover {
+  color: #00baa8;
+}
+a.img-link {
+  border-bottom: none;
+}
+
+header {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-attachment: scroll, fixed;
+  background-image: url("../images/overlay.png"), url("../images/bg.jpg");
+  background-position: top left, center;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  color: rgba(255, 255, 255, 0.5);
+  height: 100%;
+  padding: 8em 4em;
+  position: fixed;
+  text-align: right;
+  top: 0;
+  left: 0;
+}
+header h1 {
+  color: rgba(255, 255, 255, 0.637);
+  font-size: 1.35em;
+  line-height: 1.75em;
+  font-weight: 400;
+  margin: 0;
+}
+header #avatar {
+  border-radius: 100%;
+  margin: auto;
+  width: 10em;
+}
+header ul {
+  cursor: default;
+  list-style: none;
+  padding-left: 0;
+}
+header ul li {
+  display: inline-block;
+  padding: 0 1em 0 0;
+}
+
+main {
+  margin-left: 35%;
+  max-width: 54em;
+  padding: 8em 4em 4em 4em;
+  width: 67%;
+}
+main section {
+  border-top: solid 2px #efefef;
+  margin: 4em 0 0 0;
+  padding: 4em 0 0 0;
+}
+main section:first-child {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+main .row {
+  display: flex;
+  min-height: 100px;
+}
+main .column {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 0 0;
+}
+
+.spectral {
+  font-family: "Spectral";
+}
+
+.name {
+  font-family: "Spectral";
+  color: #ff738e;
+}
+
+.code-links {
+  margin-top: 0.25em;
+}
+.code-links a {
+  text-align: center;
+  border: none;
+  display: inline;
+  margin: 0 1em 0 0;
+}
+
+/* XLarge */
+@media screen and (max-width: 1800px) {
+  body {
+    font-size: 12pt;
+  }
+}
+/* Large */
+@media screen and (max-width: 1280px) {
+  header {
+    padding: 6em 3em 3em 3em;
+    width: 30%;
+    margin-bottom: 0;
+  }
+  header h1 {
+    font-size: 1.25em;
+  }
+  header main {
+    margin-left: 30%;
+    max-width: none;
+    padding: 6em 3em 3em 3em;
+    width: 70%;
+  }
+}
+/* Medium */
+@media screen and (max-width: 980px) {
+  ul li {
+    font-size: 1.25em;
+  }
+  header {
+    background-attachment: scroll;
+    background-position: right;
+    background-size: auto, cover;
+    left: auto;
+    padding: 6em 4em;
+    position: relative;
+    text-align: center;
+    top: auto;
+    width: 100%;
+    display: block;
+  }
+  header h1 {
+    padding-top: 1rem;
+    font-size: 1.75em;
+  }
+  header #links {
+    text-align: center;
+  }
+  main {
+    margin: 0;
+    padding: 6em 4em;
+    width: 100%;
+  }
+  main #intro {
+    text-align: center;
+  }
+  main h2 {
+    text-align: center;
+  }
+}
+/* Small */
+@media screen and (max-width: 736px) {
+  h1 {
+    font-size: 1.25em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  ul li {
+    padding-left: 2em;
+  }
+  #intro {
+    min-height: 4rem;
+  }
+  header {
+    padding: 2.25em 1.5em;
+  }
+  main {
+    padding: 2.25em 1.5em 0.25em 1.5em;
+  }
+  main section {
+    margin: 2.25em 0 0 0;
+    padding: 2.25em 0 0 0;
+  }
+  .row {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 480px) {
+  header {
+    font-size: small;
+  }
+}/*# sourceMappingURL=styles.css.map */
