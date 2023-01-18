@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="icon" type="images/svg+xml" href="images/favicon.svg" />
     <script src="https://kit.fontawesome.com/9d216659e4.js" crossorigin="anonymous"></script>
-
     <title>ReadWritten</title>
   </head>
   <body>
@@ -41,7 +40,17 @@
     </header>
     <main>
       <section id="intro">
-        <h2>Hi! I'm <span class="name">Alice</span>, a Manchester-based <span class="auto-type"></span></h2>
+        <h2 id="intro-text">Hi! I'm <span class="name">Alice</span>, a Manchester-based <span class="auto-type"></span></h2>
+        <noscript>
+          <style>
+            #intro-text {
+              display: none;
+            }
+          </style>
+          <div class="no-js">
+            <h2>Hi! I'm <span class="name">Alice</span>, a Manchester-based developer.</h2>
+          </div>
+        </noscript>
       </section>
       <section id="projects">
         <h2>Recent Projects</h2>
@@ -121,7 +130,7 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
       var typed = new Typed(".auto-type", {
-        strings: ["web developer.", "Northcoders graduate.", "internet enthusiast."],
+        strings: ["developer.", "Northcoders graduate.", "internet enthusiast."],
         typeSpeed: 70,
         backSpeed: 50,
         backDelay: 3000,
